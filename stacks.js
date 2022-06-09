@@ -33,6 +33,21 @@ class stack {
             this.top.next = holdingPointer
         }
         this.length ++;
-    }   
+    }  
+    pop()
+    {   
+        if(this.length === 0 ){
+            console.log("NO tiene ningun elemento el stack")
+        }
+        else if(this.length === 1){
+            this.top = null
+            this.bottom = null
+        }
+        else{
+            this.top = this.top.next
+            this.length--;
+        }
+        return this
+    } 
 
 }
